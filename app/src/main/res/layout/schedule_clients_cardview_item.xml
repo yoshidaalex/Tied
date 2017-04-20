@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="180dp"
+    android:layout_marginRight="15dp"
+    android:background="@drawable/curve_white_background_with_stroke"
+    android:padding="10dp">
+
+
+    <ImageView
+        android:id="@+id/menu_icon"
+        android:layout_width="15dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/menu_icon_grey" />
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pic"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/default_avatar" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="Ekaruz Technology hhhj jjjj "
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/schedule_title_bg_color"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="5 miles away"
+        android:textColor="@color/schedule_title_bg_color"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:id="@+id/last_visit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/distance"
+        android:layout_marginTop="3dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginRight="4dp"
+            android:src="@mipmap/info_warning" />
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Last visited 3 months ago"
+            android:textColor="@color/schedule_title_bg_color"
+            android:textSize="9sp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="7dp"
+        android:layout_below="@+id/last_visit"
+        android:background="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/schedule"
+        android:layout_below="@+id/line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="SCHEDULE NOW"
+        android:textColor="@color/button_bg"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

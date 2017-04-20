@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@drawable/background_blue">
+
+        <TextView
+            android:id="@+id/txt_client_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Report"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/back_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_close"
+                android:onClick="onClick"
+                style="@style/ActionBarIcon"
+                android:layout_centerVertical="true"
+                android:src="@drawable/btn_back_arrow"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <TextView
+            android:text=""
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="14sp"
+            android:id="@+id/txt_user_email"
+            android:textColor="@color/grey"
+            android:background="@color/white"
+            android:gravity="right|center_vertical"
+            android:paddingRight="15dp" />
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="0.1dp"
+                      android:layout_below="@+id/txt_user_email"
+        android:background="@color/light_gray"/>
+
+
+<ScrollView android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_user_email"
+            android:layout_above="@+id/txt_report">
+
+
+
+
+            <LinearLayout
+                android:id="@+id/visit_radio"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:id="@+id/csv_layout"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="25dp"
+                    android:onClick="onClick">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/circle_uncheck"
+                        android:id="@+id/img_csv" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CSV"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="7dp"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pdf_layout"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="25dp"
+                    android:onClick="onClick">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/circle_uncheck"
+                        android:id="@+id/img_pdf" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PDF"
+                        android:textColor="@color/schedule_title_bg_color"
+                        android:id="@+id/txt_two_weeks"
+                        android:layout_marginLeft="7dp"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView30"
+                android:text="Report Content"
+                android:textColor="@android:color/black"
+                android:textSize="17sp" />
+
+            <RelativeLayout
+                android:id="@+id/sales_layout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:onClick="onClick">
+
+                <ImageView
+                    android:id="@+id/img_sales"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/circle_uncheck"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:paddingLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sales"
+                    android:textColor="@color/schedule_title_bg_color"
+                    android:textStyle="bold"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <View android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/light_gray" />
+
+            <RelativeLayout
+                android:id="@+id/visits_layout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:onClick="onClick">
+
+                <ImageView android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/circle_uncheck"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/img_visits"/>
+
+                <TextView
+                    android:paddingLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Visits"
+                    android:textColor="@color/schedule_title_bg_color"
+                    android:textStyle="bold"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <View android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/light_gray" />
+
+            <RelativeLayout
+                android:id="@+id/clients_layout"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:onClick="onClick">
+
+                <ImageView android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/circle_uncheck"
+                    android:layout_alignParentBottom="false"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/img_clients"/>
+
+                <TextView
+                    android:paddingLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Clients"
+                    android:textColor="@color/schedule_title_bg_color"
+                    android:textStyle="bold"
+                    android:layout_alignParentTop="false"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+            <View android:layout_width="match_parent"
+                  android:layout_height="0.1dp"
+                  android:background="@color/light_gray" />
+            <LinearLayout
+                    android:id="@+id/year_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="5dp"
+                    android:onClick="onClick">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Year"
+                        style="@style/FieldLabels" />
+
+                <RelativeLayout
+                        android:id="@+id/industry_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                    <ImageView android:layout_width="30dp"
+                               android:layout_height="40dp"
+                               android:layout_centerInParent="true"
+                               android:src="@drawable/right_arrow"
+                               android:layout_marginBottom="10dp"
+                               android:layout_marginRight="5dp"
+                               android:layout_alignParentRight="true"/>
+
+                    <TextView
+                            android:paddingLeft="5dp"
+                            android:id="@+id/txt_year"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2016"
+                            android:textColor="@color/schedule_title_bg_color"
+                            android:textStyle="bold"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:textSize="14sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="0.1dp"
+                  android:background="@color/light_gray" />
+
+            <LinearLayout
+                    android:id="@+id/month_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="vertical"
+                    android:paddingTop="5dp"
+                    android:onClick="onClick">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Month"
+                        style="@style/FieldLabels" />
+
+                <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <ImageView android:layout_width="30dp"
+                               android:layout_height="40dp"
+                               android:layout_centerInParent="true"
+                               android:src="@drawable/right_arrow"
+                               android:layout_marginBottom="10dp"
+                               android:layout_marginRight="5dp"
+                               android:layout_alignParentRight="true"/>
+
+                    <TextView
+                            android:paddingLeft="5dp"
+                            android:id="@+id/txt_month"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nov"
+                            android:textColor="@color/schedule_title_bg_color"
+                            android:textStyle="bold"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:textSize="14sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/light_gray" />
+
+           </LinearLayout>
+        </ScrollView>
+        <TextView
+            android:id="@+id/txt_report"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_curve_blue_stroke"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Send Report"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"
+            android:onClick="onClick" />
+    </LinearLayout>
+</LinearLayout>

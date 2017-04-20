@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/row_header_layout"></include>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ababab"
+        android:drawableLeft="@drawable/ic_message"
+        android:drawablePadding="20dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:padding="20dp"
+        android:text="@string/control_who_sees_your_activities"
+        android:textSize="20sp" />
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/rvSalesPrivacy"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+</LinearLayout>

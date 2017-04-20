@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:background="@drawable/add_more_clients"
+        android:layout_height="125dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="0dp"
+                android:text="Create Goal"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/back_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_close"
+                    android:layout_width="@dimen/action_bar_icon_height"
+                    android:layout_height="@dimen/action_bar_icon_height"
+                    android:padding="@dimen/action_bar_icon_padding"
+                    android:src="@drawable/btn_back_arrow" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ok_but"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/action_bar_icon_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add More Clients"
+                android:id="@+id/txt_title"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView4"
+        android:layout_below="@+id/top_layout" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/top_layout">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <TextView
+                        style="@style/FieldLabels"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Name your goal"
+                        android:textColor="@color/gray" />
+
+                    <EditText
+                        android:id="@+id/goal_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:textColor="@color/black"
+                        android:hint="Goal name goes here"
+                        android:textColorHint="@color/black"
+                        android:inputType="text" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@color/light_gray"
+                    android:layout_marginTop="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <TextView
+                        style="@style/FieldLabels"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/target_label"
+                        android:text="How clients more would you be adding?"
+                        android:textColor="@color/gray" />
+
+                    <EditText
+                        android:id="@+id/how_much"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/black"
+                        android:hint="$16,000"
+                        android:textColorHint="@color/black" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@color/light_gray"
+                    android:layout_marginTop="10dp" />
+
+                <LinearLayout
+                    android:id="@+id/layout_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <TextView
+                        style="@style/FieldLabels"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="End date"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/date"
+                        android:text="September 21, 2016"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/date_selected"
+                        android:visibility="gone"
+                        android:textColor="@color/grey"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@color/light_gray"
+                    android:layout_marginTop="10dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <TextView
+                        style="@style/FieldLabels"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ADD NOTE"
+                        android:textColor="@color/black" />
+
+                    <EditText
+                        android:id="@+id/note"
+                        android:inputType="textMultiLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:textColor="@color/gray"
+                        android:textSize="13sp"
+                        android:textColorHint="@color/gray"
+                        android:hint="User&apos;s Note goes here... Whatever they want to add as a reminder or " />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/SeperatorHorizontal"
+                    android:layout_marginTop="10dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="SET MY COAL"
+                android:id="@+id/txt_set_my_goal"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/blue_fill_grey_stroke"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

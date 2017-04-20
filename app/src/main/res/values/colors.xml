@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#363640</color>
+    <color name="colorPrimaryDark">#3c96ff</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="white2">#f5f5f5</color>
+    <color name="button_bg">#3c96ff</color>
+    <color name="semi_transparent_black">#40000000</color>
+    <color name="accentColor">#898989</color>
+    <color name="lineColor">#6074c2</color>
+    <color name="text_disable_color">#b4d0e8</color>
+    <color name="alert_bg_color">#f90c29</color>
+    <color name="schedule_title_bg_color">#161a22</color>
+    <color name="schedule_create_appointment_bg_color">#e6ebed</color>
+    <color name="schedule_tab_bar_color">#1d2431</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="primary">#002943</color>
+    <color name="icon_green">#38df22</color>
+    <color name="color_green">#061204</color>
+    <color name="black">#000000</color>
+
+    <color name="off_white">#fafafa</color>
+    <color name="background2">#E0E0E0</color>
+    <color name="indigo">#3f51b5</color>
+    <color name="blue">#3c96ff</color>
+    <color name="grey">#32323a</color>
+    <color name="gray">#32323a</color>
+    <color name="light_gray">#dae1e4</color>
+    <color name="gray_light">#dae1e4</color>
+    <color name="light_gray2">#bbbbbb</color>
+    <color name="drawer_background">#203049</color>
+
+    <color name="red_color">#ff1414</color>
+    <color name="orange_color">#feb414</color>
+    <color name="green_color">#00e500</color>
+    <color name="green_color1">#167a59</color>
+    <color name="light_grey3">#f3f5f6</color>
+    <color name="gradient">#94348e</color>
+    <color name="blue_status_bar">#2e60b6</color>
+    <color name="sub_title_bg">#f7f8f8</color>
+    <color name="transparent">#00000000</color>
+</resources>

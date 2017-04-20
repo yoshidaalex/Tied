@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@drawable/background_blue">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_toLeftOf="@+id/img_add"
+            android:layout_toRightOf="@+id/back_layout"
+            android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:maxLines="1"
+            android:text="REVENUE"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/back_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_close"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/btn_back_arrow" />
+
+            <TextView
+                android:id="@+id/txt_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/img_close"
+                android:text="@string/str_back"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_add"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/add_icon" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        style="@style/SectionLayout2"
+        >
+
+        <TextView
+            android:id="@+id/txt_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="REVENUE INFO"
+            style="@style/SectionText"
+            android:textIsSelectable="false"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="2dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/FieldLabels"
+            android:text="MONTHLY NUMBERS FROM LAST YEAR(USD)" />
+
+        <TextView
+            android:id="@+id/monthly_last_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10,000,000"
+            android:textColor="@color/grey"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+    <View
+        style="@style/SectionDivider"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="2dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/FieldLabels"
+            android:text="MONTHLY NUMBERS FROM YTD(USD)" />
+
+        <TextView
+            android:id="@+id/monthly_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="35,120,000"
+            android:textColor="@color/grey"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+</LinearLayout>

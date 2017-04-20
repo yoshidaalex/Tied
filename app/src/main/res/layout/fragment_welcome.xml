@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_title"
+        android:src="@mipmap/mark"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="25dp"
+        android:layout_centerHorizontal="true" />
+
+    <com.tied.lib.coverflow.core.PagerContainer
+        android:id="@+id/pager_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_below="@+id/img_title"
+        android:layout_above="@+id/viewindicate_layout"
+        android:layout_marginBottom="15dp">
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+
+    </com.tied.lib.coverflow.core.PagerContainer>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/viewindicate_layout">
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center_vertical|center_horizontal"
+            app:ci_drawable="@mipmap/active"
+            app:ci_drawable_unselected="@mipmap/inactive"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/button_bg">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:text="@string/str_register"
+            android:id="@+id/register"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:text="New Text"
+            android:id="@+id/line"
+            android:background="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:text="@string/str_signin"
+            android:id="@+id/signin"
+            android:layout_weight="1"
+            android:textSize="17dp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical|center_horizontal" />
+    </LinearLayout>
+
+</RelativeLayout>

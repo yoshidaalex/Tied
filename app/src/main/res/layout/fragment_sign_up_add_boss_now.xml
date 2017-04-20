@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:id="@+id/top_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_signup"
+            android:id="@+id/txt_signup_label"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/img_help"
+            android:src="@mipmap/btn_help"
+            android:onClick="helpButtonClicked"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_signup_hint14"
+        android:id="@+id/txt_hint_string"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_below="@+id/top_layout"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/str_signup_hint15"
+        android:gravity="center_horizontal"
+        android:textSize="17sp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/txt_hint_string"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_layout">
+
+        <LinearLayout
+            android:onClick="profileButtonClicked"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:id="@+id/profile_layout">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/img_user_picture"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/default_avatar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/str_profile"
+                android:id="@+id/txt_profile_label"
+                android:textColor="@color/button_bg"
+                android:textSize="15dp"
+                android:layout_marginLeft="25dp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@color/button_bg"
+            android:id="@+id/continue_btn"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/img_next_arrow"
+                android:src="@mipmap/btn_next_arrow"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/img_next_arrow">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_continue"
+                    android:id="@+id/txt_continue_label"
+                    android:textSize="15dp"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerInParent="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14/15"
+                    android:id="@+id/textView"
+                    android:layout_below="@+id/txt_continue_label"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:text="@string/str_add_later"
+        android:id="@+id/txt_add_later"
+        android:layout_above="@+id/bottom_layout"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/line2"
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/button_material_light"
+        android:layout_marginTop="12dp"
+        android:layout_above="@+id/txt_add_later" />
+
+</RelativeLayout>

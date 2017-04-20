@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_blue"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="0dp"
+                android:text="Line Revenue"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:id="@+id/textView19" />
+
+
+
+            <ImageView
+                android:layout_width="@dimen/action_bar_icon_height"
+                android:layout_height="@dimen/action_bar_icon_height"
+                android:padding="@dimen/action_bar_icon_padding"
+                android:layout_gravity="center"
+                android:layout_marginLeft="0dp"
+                android:layout_alignParentLeft="true"
+                android:onClick="onClick"
+                android:id="@+id/img_back"
+                android:src="@drawable/btn_back_arrow" />
+
+            <ImageView android:layout_width="@dimen/action_bar_icon_height"
+                android:layout_height="@dimen/action_bar_icon_height"
+                android:id="@+id/img_plus"
+                android:src="@drawable/plus_thin"
+                android:layout_alignParentEnd="false"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/action_bar_icon_padding"
+                android:layout_alignParentRight="true" />
+
+            <ImageView
+                android:layout_width="@dimen/action_bar_icon_height"
+                android:layout_height="@dimen/action_bar_icon_height"
+                android:id="@+id/img_filter"
+                android:src="@drawable/ic_filter_map"
+                android:layout_alignParentEnd="false"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/img_plus"
+                android:padding="@dimen/action_bar_icon_padding" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="lroko Technologies LLC"
+                android:layout_centerHorizontal="true"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:layout_centerVertical="true"
+                android:layout_below="@+id/name"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:id="@+id/total_revenue_txt"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+
+            <TextView
+                android:id="@+id/string"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="All time sales : 0 clients Total"
+                android:layout_below="@+id/total_revenue_txt"
+                android:textSize="13sp"
+                android:alpha="0.5"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/light_grey3"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/dollar_icon1"
+                android:layout_centerVertical="true"
+                android:src="@drawable/dollar_purple" />
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:id="@+id/txt_last_year"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Add"
+                android:gravity="center_vertical|center_horizontal"
+                android:background="@drawable/button_round" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/dollar_icon1"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/txt_last_year"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last Year (YTD)"
+                    android:id="@+id/txt_line_name1"
+                    android:textColor="#4A4A4A"
+                    android:textSize="13sp"
+                    android:layout_marginTop="3dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monthly numbers from last year"
+                    android:id="@+id/txt_date1"
+                    android:textColor="@color/gray"
+                    android:layout_marginTop="3dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/item_cell"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@color/light_grey3"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/dollar_icon"
+                android:layout_centerVertical="true"
+                android:src="@drawable/dollar_purple" />
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="30dp"
+                android:id="@+id/txt_this_year"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="Add"
+                android:gravity="center_vertical|center_horizontal"
+                android:background="@drawable/button_round" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/dollar_icon"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/txt_this_year"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="This Year (YTD)"
+                    android:id="@+id/txt_line_name"
+                    android:textColor="#4A4A4A"
+                    android:textSize="13sp"
+                    android:layout_marginTop="3dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monthly numbers from YTD"
+                    android:id="@+id/txt_date"
+                    android:textColor="@color/gray"
+                    android:layout_marginTop="3dp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ExpandableListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/expandableListView"
+            android:background="@color/white"
+            android:layout_below="@+id/top_layout"
+            android:layout_marginTop="3dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

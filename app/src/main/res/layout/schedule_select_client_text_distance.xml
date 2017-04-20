@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/schedule_create_appointment_bg_color"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
+
+
+    <TextView
+        android:id="@+id/txt_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text="0 - 5 MILES"
+        android:textColor="@color/schedule_title_bg_color"
+        android:textIsSelectable="false"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

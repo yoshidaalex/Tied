@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    <LinearLayout android:layout_width="match_parent"
+                  android:orientation="vertical"
+                  android:padding="10dp"
+                  android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+                android:id="@+id/profile_menu"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:background="@color/drawer_background"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:onClick="onClick"
+
+                android:layout_height="100dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                    android:id="@+id/user_picture_iv"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/default_avatar" />
+            <TextView android:layout_width="match_parent"
+                      android:text=""
+                      android:id="@+id/full_name_tv"
+                      android:layout_marginTop="30dp"
+                      android:gravity="center"
+                      android:layout_centerHorizontal="true"
+                      android:textColor="@color/white"
+                      android:textSize="20sp"
+                      android:layout_alignParentTop="true"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="match_parent"
+                      android:text=""
+                      android:id="@+id/email_tv"
+                      android:gravity="center"
+                      android:textColor="@color/white"
+                      android:layout_below="@+id/full_name_tv"
+                      android:layout_centerHorizontal="true"
+                      android:layout_height="wrap_content"/>
+            <ImageView android:layout_width="25dip"
+                       android:onClick="onClick"
+                       android:id="@+id/settings_menu"
+                       android:layout_height="25dip"
+                       android:visibility="gone"
+                       android:layout_centerInParent="true"
+                       android:layout_alignParentRight="true"
+                       android:src="@drawable/ic_gear"/>
+
+        </RelativeLayout>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_alignParentBottom="true"
+                      android:layout_height="1dip"
+                      android:background="@drawable/gradient_line_seperator"></LinearLayout>
+
+        <RelativeLayout
+                android:id="@+id/notification_menu"
+                android:onClick="onClick"
+                style="@style/DrawerMenuItem"
+        >
+            <ImageView
+                    style="@style/DrawerMenuIcon"
+                    android:src="@drawable/ic_bell_gray"
+            />
+            <TextView android:layout_width="wrap_content"
+                      android:text="Notifications"
+                      style="@style/DrawerMenuText"
+                      android:layout_height="wrap_content"/>
+            <LinearLayout android:layout_width="30dp"
+                          android:id="@+id/notification_circle"
+                          android:background="@drawable/red_circle"
+                          android:layout_alignParentRight="true"
+                          android:layout_centerVertical="true"
+                          android:gravity="center"
+                          android:layout_height="30dp">
+                <TextView android:layout_width="wrap_content"
+                          android:text="2"
+                          android:id="@+id/num_new_alerts"
+                          android:textStyle="bold"
+                          android:textColor="@color/white"
+                          android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+                android:onClick="onClick"
+                android:id="@+id/subscription_menu"
+                style="@style/DrawerMenuItem"
+        >
+            <ImageView
+                    style="@style/DrawerMenuIcon"
+                    android:src="@drawable/ic_briefcase_gray"
+            />
+            <TextView android:layout_width="wrap_content"
+                      android:text="Subscription"
+                      style="@style/DrawerMenuText"
+                      android:layout_height="wrap_content"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:text="Free Trial"
+                      android:layout_alignParentRight="true"
+                      android:textStyle="bold"
+android:visibility="invisible"
+                      android:id="@+id/package_name"
+                      android:textColor="@color/white"
+                      android:layout_height="wrap_content"/>
+            <TextView android:layout_width="wrap_content"
+                      android:text="Expires in 20 days"
+                      android:layout_alignParentRight="true"
+                      android:textStyle="bold"
+                      android:textSize="11sp"
+                      android:id="@+id/package_expiry"
+                      android:layout_below="@+id/package_name"
+                      android:textColor="#00ff00"
+                      android:layout_height="wrap_content"/>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+                android:id="@+id/lines_menu"
+                android:onClick="onClick"
+                style="@style/DrawerMenuItem">
+            <ImageView
+                    style="@style/DrawerMenuIcon"
+                    android:src="@drawable/ic_layer_gray"
+            />
+            <TextView android:layout_width="wrap_content"
+                      android:text="Lines"
+                      style="@style/DrawerMenuText"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+                android:id="@+id/territories_menu"
+                android:onClick="onClick"
+                style="@style/DrawerMenuItem">
+            <ImageView
+                    style="@style/DrawerMenuIcon"
+                    android:src="@drawable/icon_location"
+                    android:alpha="0.4"
+            />
+            <TextView android:layout_width="wrap_content"
+                      android:text="Territories"
+                      style="@style/DrawerMenuText"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+                android:id="@+id/visits"
+                style="@style/DrawerMenuItem"
+                android:onClick="onClick">
+            <ImageView
+                    style="@style/DrawerMenuIcon"
+                    android:src="@drawable/ic_user_gray"
+            />
+            <TextView android:layout_width="wrap_content"
+                      android:text="Visits and Trips"
+                      style="@style/DrawerMenuText"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+                android:id="@+id/sales_menu"
+                style="@style/DrawerMenuItem"
+                android:onClick="onClick">
+            <ImageView
+                    style="@style/DrawerMenuIcon"
+                    android:src="@drawable/ic_dollar_grey"
+                    android:alpha="0.3"
+            />
+            <TextView android:layout_width="wrap_content"
+                      android:text="Sales"
+                      style="@style/DrawerMenuText"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+                android:id="@+id/goal_menu"
+                style="@style/DrawerMenuItem"
+                android:visibility="gone"
+                android:onClick="onClick">
+            <ImageView
+                    style="@style/DrawerMenuIcon"
+                    android:src="@drawable/ic_trophy_gray"
+            />
+            <TextView android:layout_width="wrap_content"
+                      android:text="Goals"
+                      style="@style/DrawerMenuText"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/specials_menu"
+                android:onClick="onClick"
+                android:visibility="gone"
+                style="@style/DrawerMenuItem">
+            <ImageView
+                    style="@style/DrawerMenuIcon"
+                    android:src="@drawable/ic_star_gray"
+            />
+            <TextView android:layout_width="wrap_content"
+                      android:text="Sales"
+                      style="@style/DrawerMenuText"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+                android:id="@+id/reports_menu"
+                style="@style/DrawerMenuItem"
+                android:onClick="onClick">
+            <ImageView
+                    style="@style/DrawerMenuIcon"
+                    android:src="@drawable/ic_share_gray"
+            />
+            <TextView android:layout_width="wrap_content"
+                      android:text="Reports"
+                      style="@style/DrawerMenuText"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_alignParentBottom="true"
+                      android:layout_height="1dip"
+                      android:background="@drawable/gradient_line_seperator"></LinearLayout>
+
+        <RelativeLayout
+                android:id="@+id/boss_menu"
+                style="@style/DrawerMenuItem"
+                android:visibility="gone"
+                android:onClick="onClick">
+            <ImageView
+                    style="@style/DrawerMenuIcon"
+                    android:src="@drawable/ic_user_gray"
+            />
+            <TextView android:layout_width="wrap_content"
+                      android:text="Boss"
+                      style="@style/DrawerMenuText"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+                android:id="@+id/coworker_menu"
+                style="@style/DrawerMenuItem"
+                android:onClick="onClick">
+            <ImageView
+                    style="@style/DrawerMenuIcon"
+                    android:src="@drawable/ic_users_gray"
+            />
+            <TextView android:layout_width="wrap_content"
+                      android:text="Co-Workers"
+                      style="@style/DrawerMenuText"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+                android:id="@+id/invite_menu"
+                style="@style/DrawerMenuItem"
+                android:onClick="onClick">
+            <ImageView
+                    style="@style/DrawerMenuIcon"
+                    android:src="@drawable/ic_menu_send"
+                    android:alpha="0.1"
+            />
+            <TextView android:layout_width="wrap_content"
+                      android:text="Send Invite"
+                      style="@style/DrawerMenuText"
+                      android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/logout"
+            style="@style/DrawerMenuItem"
+            android:onClick="onClick">
+            <ImageView
+                style="@style/DrawerMenuIcon"
+                android:src="@android:drawable/ic_lock_power_off"
+                android:alpha="0.1"
+                />
+            <TextView android:layout_width="wrap_content"
+                android:text="Log out"
+                style="@style/DrawerMenuText"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>
+    </merge>

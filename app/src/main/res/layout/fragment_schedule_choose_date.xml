@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/schedule_create_appointment_bg_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/schedule_title_bg_color"
+        android:layout_height="60dp">
+
+        <TextView
+            android:id="@+id/txt_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:color="@color/white"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:text="Cancel"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:layout_alignTop="@+id/txt_title"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="12dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:color="@color/white"
+            android:text="Date"
+            android:textIsSelectable="false"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:color="@color/white"
+            android:id="@+id/txt_select"
+            android:layout_width="50dp"
+            android:textAlignment="center"
+            android:text="Select"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_alignTop="@+id/txt_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="13dp"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+    <CalendarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/calendarView"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/button_bg" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/top_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:weightSum="5">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/time_of_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/button_bg"
+                        android:textSize="35sp"/>
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/schedule_title_bg_color"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/img_sunny"
+                            android:layout_width="40dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:src="@mipmap/sunny_red" />
+
+                        <TextView
+                            android:id="@+id/weather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="0°"
+                            android:textColor="@color/schedule_title_bg_color"
+                            android:textSize="40sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="San Francisco"
+                        android:textColor="@color/schedule_title_bg_color"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:textSize="13sp"
+                android:textColor="@color/grey"
+                android:text="The blue dots suggests days with averagely good weathers, take advantage of these days for your next appointment"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

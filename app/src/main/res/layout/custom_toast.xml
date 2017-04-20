@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tied.android.tiedapp.util.AlertLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+            android:background="@color/alert_bg_color"
+            android:gravity="center_vertical|center_horizontal"
+              android:paddingTop="40dip"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:visibility="invisible"
+        android:id="@+id/custom_alert">
+
+<ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/icon"
+        android:src="@drawable/attention" />
+
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_alert"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:layout_marginLeft="25dp" />
+</com.tied.android.tiedapp.util.AlertLayout>

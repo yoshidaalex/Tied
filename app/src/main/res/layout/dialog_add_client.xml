@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/atvCancel"
+        android:background="@drawable/bg_white_rounded"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/client_layout">
+
+            <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/com_facebook_profile_picture_blank_portrait"
+                    android:alpha="0.3"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add New Client"
+                    android:textColor="@color/blue"
+                    android:textSize="14sp"
+                    android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/gray_light"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"></View>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/schedule_layout">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imageView25"
+                android:src="@drawable/calendar"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Schedule"
+                android:id="@+id/textView31"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/gray_light"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"></View>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/visit_layout">
+
+            <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_users_gray"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add New Visit"
+                    android:textColor="@color/blue"
+                    android:textSize="14sp"
+                    android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/gray_light"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/sale_layout">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/sales"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add New Sale"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/gray_light"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"></View>
+
+
+<!--
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/goal_layout">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_trophy_gray"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create Goal"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/gray_light"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"></View>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/line_layout">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_layer_gray"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add New Line"
+                android:textColor="@color/blue"
+                android:textSize="14sp"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/light_gray"></View>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/atvCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_white_rounded"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="CANCEL"
+        android:textAllCaps="false"
+        android:textColor="@color/red_color"
+        android:textSize="14sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+</RelativeLayout>

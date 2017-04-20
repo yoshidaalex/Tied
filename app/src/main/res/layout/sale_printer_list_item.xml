@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="January"
+                android:id="@+id/txt_month"
+                android:textColor="@color/schedule_title_bg_color"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="3dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$35,000"
+                    android:id="@+id/txt_price"
+                    android:textColor="@color/blue"
+                    android:layout_marginTop="2dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_client_count"
+                    android:textColor="@color/schedule_title_bg_color"
+                    android:layout_marginTop="2dp"
+                    android:text=" 35 cliens" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="110dp"
+            android:layout_height="40dp"
+            android:text="Send Report"
+            android:id="@+id/txt_send"
+            android:textColor="@color/white"
+            android:background="@drawable/blue_fill_grey_stroke"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@android:color/darker_gray" />
+
+</LinearLayout>

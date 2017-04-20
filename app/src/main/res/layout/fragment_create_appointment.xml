@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@drawable/background_blue">
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:padding="@dimen/action_bar_icon_padding"
+            android:layout_width="@dimen/action_bar_icon_height"
+            android:layout_height="@dimen/action_bar_icon_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="0dp"
+            android:src="@drawable/btn_close" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Appointment "
+            android:id="@+id/title"
+            android:textSize="18sp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="80dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="25dp"
+                android:paddingRight="24dp"
+                android:paddingBottom="10dp"
+                android:background="@color/schedule_create_appointment_bg_color">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                           >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TITLE"
+                                android:paddingLeft="4dp"
+                                android:id="@+id/gainFocus"
+                                android:nextFocusDown="@+id/txt_title"
+                                style="@style/SectionText" />
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@android:color/transparent"
+                                android:id="@+id/txt_title"
+                                android:textColor="@color/schedule_title_bg_color"
+                                android:textSize="16sp"
+                                android:hint="Enter title or label"
+                                android:textColorHint="@color/light_gray2" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@android:color/darker_gray"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="0dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/right_layout"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DESCRIPTION"
+                            style="@style/SectionText" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:backgroundTint="@android:color/transparent"
+                            android:id="@+id/txt_description"
+                            android:textColor="@color/schedule_title_bg_color"
+                            android:textSize="16sp"
+                            android:hint="Enter summary of purpose"
+                            android:textColorHint="@color/light_gray2" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="15dp">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:paddingLeft="4dp"
+                            android:text="Client"
+                            android:textColor="@color/accentColor"
+                            android:textSize="14sp" />
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+
+                            android:layout_alignParentRight="true"
+                            android:id="@+id/client_layout">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:id="@+id/img_avatar_schedule"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/default_avatar"
+                                android:layout_marginBottom="4dp" />
+                    <LinearLayout android:layout_width="wrap_content"
+                                  android:orientation="vertical"
+                                  android:layout_marginLeft="10dp"
+                                  android:layout_centerVertical="true"
+                                  android:gravity="left"
+                                  android:layout_toRightOf="@+id/img_avatar_schedule"
+                                  android:layout_height="wrap_content">
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Click to choose client"
+                                android:textSize="13sp"
+                                android:textAlignment="center"
+                                android:gravity="left"
+                                android:id="@+id/client_name"
+                                android:textColor="@color/schedule_title_bg_color"
+                                />
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:visibility="gone"
+                                android:textSize="11sp"
+                                android:textAlignment="center"
+                                android:gravity="left"
+                                android:id="@+id/client_company"
+                                android:textColor="@color/grey"
+                                />
+                    </LinearLayout>
+
+                        <ImageView android:layout_width="@dimen/action_bar_icon_height"
+                            android:layout_height="@dimen/action_bar_icon_height"
+                            android:padding="@dimen/action_bar_icon_padding"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_arrow_right_blue"
+                            android:id="@+id/img_right_arrow"/>
+                    </RelativeLayout>
+
+
+                    <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:layout_marginBottom="0dp"
+                            android:background="@android:color/darker_gray" />
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/img_plus_date"
+                        android:paddingTop="10dp">
+                    <RelativeLayout
+                        android:id="@+id/layout_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                                android:layout_width="@dimen/action_bar_icon_height"
+                                android:layout_height="@dimen/action_bar_icon_height"
+                                android:padding="@dimen/action_bar_icon_padding"
+                            android:src="@drawable/icon_plus"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/img_plus_date" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/img_plus_date"
+                            android:paddingTop="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="4dp"
+                                android:text="Date"
+                                android:textColor="@color/accentColor"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/date"
+                                android:enabled="true"
+                                android:hint="Click to choose date of appointment"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/date_selected"
+                                android:visibility="gone"
+                                android:enabled="false"
+                                android:textColor="@color/schedule_title_bg_color"
+                                android:textSize="16sp"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <RelativeLayout
+                        android:id="@+id/layout_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                                android:layout_width="@dimen/action_bar_icon_height"
+                                android:layout_height="@dimen/action_bar_icon_height"
+                                android:padding="@dimen/action_bar_icon_padding"
+                            android:src="@drawable/icon_plus"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/img_plus1" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toLeftOf="@+id/img_plus1"
+                            android:paddingTop="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Time"
+                                android:paddingLeft="4dp"
+                                android:textColor="@color/accentColor"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/time"
+                                android:paddingTop="4dp"
+                                android:textColor="@color/schedule_title_bg_color"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.1dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <RelativeLayout
+                            android:id="@+id/layout_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        <ImageView
+                                android:layout_width="@dimen/action_bar_icon_height"
+                                android:layout_height="@dimen/action_bar_icon_height"
+                                android:padding="@dimen/action_bar_icon_padding"
+                                android:src="@drawable/icon_location"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:id="@+id/img_plus3" />
+
+                        <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toLeftOf="@+id/img_plus3"
+                                android:paddingTop="5dp">
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Location"
+                                    android:paddingLeft="4dp"
+                                    android:textColor="@color/accentColor"
+                                    android:textSize="14sp" />
+
+                            <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/txt_location"
+                                    android:paddingTop="4dp"
+                                    android:hint="Click to enter location"
+                                    android:textColor="@color/schedule_title_bg_color"
+                                    android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0.1dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@android:color/darker_gray" />
+                    <RelativeLayout
+                        android:id="@+id/layout_reminder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                                android:layout_width="@dimen/action_bar_icon_height"
+                                android:layout_height="@dimen/action_bar_icon_height"
+                                android:padding="@dimen/action_bar_icon_padding"
+                            android:src="@drawable/up_down_arrow"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/img_reminder" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:layout_toLeftOf="@+id/img_reminder">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Reminder"
+                                android:paddingLeft="4dp"
+                                android:textColor="@color/accentColor"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="4dp"
+                                android:paddingTop="4dp"
+                                android:text="Notify Me 20 mins before time"
+                                android:id="@+id/reminder"
+                                android:textColor="@color/schedule_title_bg_color"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="@string/schedule_create_new_schedule_btn"
+        android:id="@+id/txt_create_schedule"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/button_bg" />
+
+</RelativeLayout>

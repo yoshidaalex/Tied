@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ 230 USD"
+            android:id="@+id/txt_price"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/schedule_title_bg_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_alignParentRight="false"
+            android:layout_centerVertical="true" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/txt_price"
+            android:gravity="right">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="19 January 2016"
+                android:id="@+id/txt_date"
+                android:textColor="@color/schedule_title_bg_color"
+                android:layout_marginTop="3dp"
+                android:textSize="14sp"
+                android:gravity="right" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This is a note added by the user"
+                android:id="@+id/txt_summary"
+                android:textColor="@color/schedule_title_bg_color"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:gravity="right"
+                android:layout_marginTop="5dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="0dp"
+        android:background="@android:color/darker_gray" />
+</LinearLayout>

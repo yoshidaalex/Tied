@@ -1,0 +1,249 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme1" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:editTextStyle">@style/AppEditTextStyle</item>
+        <!--<item name="android:windowBackground">@color/white</item>-->
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+    </style>
+    <style name="customDialog" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:windowAnimationStyle">@style/customDialogAnimation</item>
+
+    </style>
+    <style name="customHelpDialog" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:windowAnimationStyle">@style/customDialogAnimation</item>
+        <item name="android:background">@color/transparent</item>
+
+    </style>
+
+    <style name="customDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_right</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_left</item>
+
+    </style>
+
+    <style name="NoResultText" parent="AppTheme">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center</item>
+
+        <item name="android:layout_gravity">center</item>
+
+        <item name="android:layout_margin">30dp</item>
+        <item name="android:background">@drawable/white_fill_grey_stroke</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:textSize">15sp</item>
+
+        <item name="android:textColor">@color/light_gray</item>
+
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AppBaseTheme" parent="Theme.AppCompat">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="Transparent" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:textViewStyle">@style/RobotoTextViewStyle</item>
+        <!--<item name="android:calendarViewStyle">@style/Widget.CalendarView.Custom</item>-->
+        <!-- Customize your theme here. -->
+        <item name="android:editTextStyle">@style/AppEditTextStyle</item>
+        <item name="editTextStyle">@style/AppEditTextStyle</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="TextAppearence.App.TextInputLayout" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/accentColor</item>
+    </style>
+
+    <style name="RobotoTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <style name="AppEditTextStyle"  parent="android:Widget.EditText">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <style name="EditTextStyle" parent="RobotoTextViewStyle">
+        <item name="android:textColor">@color/tw__medium_gray</item>
+        <item name="android:textColorHint">@color/light_gray2</item>
+    </style>
+    <style name="TabTextStyle" parent="RobotoTextViewStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/white</item>
+
+    </style>
+    <style name="MyEditTextStyle"  parent="AppEditTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <style name="HeadingText" parent="RobotoTextViewStyle">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="SectionText" parent="RobotoTextViewStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+    <style name="SignUpTitle" parent="RobotoTextViewStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="FieldLabels" parent="RobotoTextViewStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
+    <style name="AppDialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <style name="SectionLayout" parent="AppTheme">
+        <item name="android:background">@color/light_gray</item>
+        <item name="android:paddingTop">8dip</item>
+        <item name="android:paddingBottom">8dip</item>
+        <item name="android:paddingLeft">20dip</item>
+        <item name="android:paddingRight">5dip</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SectionLayout2" parent="AppTheme">
+        <item name="android:background">@color/light_gray</item>
+        <item name="android:paddingTop">8dip</item>
+        <item name="android:paddingBottom">8dip</item>
+        <item name="android:paddingLeft">20dip</item>
+        <item name="android:paddingRight">5dip</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SectionDivider" parent="AppTheme">
+        <item name="android:background">@color/light_gray</item>
+        <item name="android:paddingBottom">3dip</item>
+        <item name="android:layout_marginTop">3dip</item>
+        <item name="android:layout_height">1dip</item>
+        <item name="android:layout_width">1dip</item>
+    </style>
+
+    <style name="SpinnerStyle" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">30dip</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:gravity">top</item>
+        <item name="android:padding">0dip</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
+    <style name="SearchEditText" parent="AppTheme">
+        <item name="android:background">@drawable/curve_editext</item>
+        <item name="android:drawableLeft">@drawable/ic_search_grey_small</item>
+
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:paddingLeft">30dp</item>
+        <item name="android:paddingRight">30dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="DrawerMenuItem" parent="AppTheme">
+
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@color/drawer_background</item>
+    </style>
+    <style name="DrawerMenuIcon" parent="AppTheme">
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_width">25dp</item>
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+
+    <item name="android:layout_centerVertical">true</item>
+            </style>
+
+    <style name="DrawerMenuText" parent="AppTheme">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginLeft">60dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+
+    <style name="SeperatorVertical" parent="AppTheme">
+        <item name="android:layout_width">0.1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/light_gray</item>
+    </style>
+
+    <style name="SeperatorHorizontal" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.1dp</item>
+        <item name="android:background">@color/light_gray</item>
+    </style>
+    <style name="ActionBarIcon">
+        <item name="android:layout_width">@dimen/action_bar_icon_height</item>
+        <item name="android:layout_height">@dimen/action_bar_icon_height</item>
+        <item name="android:padding">@dimen/action_bar_icon_padding</item>
+    </style>
+    <!--<style name="Widget.CalendarView.Custom" parent="android:Widget.CalendarView">-->
+        <!--<item name="android:weekNumberColor">@color/schedule_title_bg_color</item>-->
+        <!--<item name="android:focusedMonthDateColor">@color/colorPrimaryDark</item>-->
+        <!--<item name="android:weekNumberColor">@color/colorAccent</item>-->
+        <!--<item name="android:weekDayTextAppearance">@style/RobotoTextViewStyle</item>-->
+        <!--<item name="android:dateTextAppearance">@style/RobotoTextViewStyle</item>-->
+    <!--</style>-->
+
+    <style name="AppTheme.FullScreen">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+
+</resources>

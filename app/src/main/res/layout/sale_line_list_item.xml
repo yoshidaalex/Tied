@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/white">
+
+
+    <RelativeLayout
+            android:id="@+id/item_cell"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/dollar_icon" />
+
+        <ImageView
+                android:layout_width="10dp"
+                android:layout_height="20dp"
+                android:id="@+id/arrow_icon"
+                android:src="@mipmap/arrow_right"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="4dp" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$1,200,400"
+                android:id="@+id/txt_price"
+                android:layout_toLeftOf="@+id/arrow_icon"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/schedule_title_bg_color"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:gravity="right"
+                android:layout_marginTop="3dp" />
+
+        <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(48%)"
+                android:id="@+id/txt_percent"
+                android:layout_toLeftOf="@+id/txt_price"
+                android:textColor="@color/primary_dark_material_light"
+                android:textSize="16dp"
+                android:layout_marginTop="3dp" />
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/dollar_icon"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/txt_percent">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CREATIVE CO-OP"
+                    android:id="@+id/txt_line_name"
+                    android:textColor="@color/schedule_title_bg_color"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="3dp" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Last sale : 5 days ago"
+                    android:id="@+id/txt_date"
+
+                    android:visibility="gone"
+                    android:textColor="@color/gray"
+                    android:layout_marginTop="2dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

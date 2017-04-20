@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/parent">
+
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@drawable/background_blue">
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:src="@mipmap/btn_back_arrow"
+            android:layout_centerVertical="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="@dimen/action_bar_icon_padding"
+            android:onClick="goBack" />
+
+        <ImageView
+            android:id="@+id/img_edit"
+            android:src="@mipmap/icon_edit"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="@dimen/action_bar_icon_padding"
+            android:onClick="onClick"/>
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:text="Sale"
+            style="@style/EditTextStyle"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_toRightOf="@+id/img_close"
+            android:layout_toLeftOf="@+id/img_edit" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/avatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/default_avatar"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:id="@+id/client_name"
+            android:text="Apple Coporation"
+            android:textColor="@color/schedule_title_bg_color"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="0.1dp"
+            android:background="@color/light_gray"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Description"
+            android:textColor="@color/schedule_title_bg_color"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:textSize="15sp"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:text="NO DESCRIPTION ADDED"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_description"
+            android:textColor="@color/grey"
+            android:gravity="center_horizontal"
+            android:textSize="13sp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="5dp" />
+
+        <LinearLayout style="@style/SeperatorHorizontal"
+            android:layout_marginTop="10dp" />
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:orientation="horizontal">
+            <ImageView
+                android:onClick="onClick"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="15dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/icon_layer_blue" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Line"
+                    android:textColor="@color/schedule_title_bg_color"
+                    android:layout_marginTop="5dp" />
+
+                <TextView android:layout_width="match_parent"
+                    style="@style/EditTextStyle"
+                    android:textColorHint="@color/light_gray2"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_line"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/SeperatorHorizontal" />
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:onClick="onClick"
+            android:orientation="horizontal">
+            <ImageView
+                android:onClick="onClick"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="15dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/icon_sale_blue" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amount"
+                    android:textColor="@color/schedule_title_bg_color"
+                    android:layout_marginTop="5dp" />
+
+                <TextView android:layout_width="match_parent"
+                    style="@style/EditTextStyle"
+                    android:textColorHint="@color/light_gray2"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:id="@+id/txt_ammount"
+                    android:inputType="numberDecimal"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/SeperatorHorizontal" />
+        <RelativeLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:id="@+id/select_date"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_timer"
+                android:onClick="onClick"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="15dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/ic_time_grey" />
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_weight="1"
+                style="@style/EditTextStyle"
+                android:textColorHint="@color/grey"
+                android:textSize="15sp"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_toRightOf="@+id/img_timer"
+                android:layout_toLeftOf="@+id/below"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date sale was made"
+                    android:textColor="@color/grey"
+                    android:layout_marginTop="5dp"
+                    android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:textColorHint="@color/light_gray2"
+                    android:textColor="@color/grey"
+                    android:textSize="13sp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:inputType="number"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="5dp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout style="@style/SeperatorHorizontal" />
+
+        <TextView
+            android:id="@+id/txt_delete"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_curve_red_stroke"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="DELETE SALE"
+            android:textColor="@color/red_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:onClick="onClick"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>
